@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+</head>
+<body>
+
+  <h1>Formulário de Contato</h1>
+
+  <form id="formularioContato">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br>
+
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+    <br>
+
+    <button type="button" onclick="enviarFormulario()">Enviar</button>
+  </form>
+
+  <script>
+    function enviarFormulario() {
+      // Obtém os valores dos campos
+      var nome = document.getElementById('nome').value;
+      var email = document.getElementById('email').value;
+      var descricao = document.getElementById('descricao').value;
+
+      // Exemplo de como você pode usar os dados (pode ser adaptado conforme necessário)
+      console.log('Nome:', nome);
+      console.log('E-mail:', email);
+      console.log('Descrição:', descricao);
+
+      // Aqui você pode adicionar lógica para enviar os dados para outro local, como uma API ou servidor
+      // Por exemplo, usando a API Fetch ou AJAX
+      // fetch('URL_DESTINO', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({ nome, email, descricao }),
+      // })
+      // .then(response => response.json())
+      // .then(data => console.log('Resposta do servidor:', data))
+      // .catch(error => console.error('Erro ao enviar dados:', error));
+    }
+  </script>
+
+</body>
+</html>
